@@ -30,10 +30,10 @@ services:
 
 
   ipfs:
-    image: ipfs/go-ipfs:v0.4.23
+    image: ipfs/go-ipfs:v0.10.0
     container_name: ipfs
-    expose:
-      - 5001
+    ports:
+      - '5001:5001'
     volumes:
       - ./data/ipfs:/data/ipfs
     networks:
@@ -78,12 +78,12 @@ services:
       VIRTUAL_PORT: 8000
       LETSENCRYPT_HOST: ${QUERY_HOST}
     restart: unless-stopped
-    expose:
-      - 8001
-      - 8000
-      - 8020
-      - 8030
-      - 8040
+    ports:
+      - '8000:8000'
+      - '8001:8001'
+      - '8020:8020'
+      - '8030:8030'
+      - '8040:8040'
     networks:
       - monitor-net
     logging: *default-logging
