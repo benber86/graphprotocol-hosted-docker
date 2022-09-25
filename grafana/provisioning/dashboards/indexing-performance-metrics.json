@@ -271,7 +271,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "abs(deployment_head{instance=\"index-node-0:8040\"} - on (network) group_left ethereum_chain_head_number{instance=\"index-node-0:8040\"})",
+          "expr": "abs(deployment_head{instance=\"graph-node:8040\"} - on (network) group_left ethereum_chain_head_number{instance=\"graph-node:8040\"})",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -281,7 +281,7 @@
         },
         {
           "exemplar": true,
-          "expr": "abs(deployment_head{instance=\"index-node-1:8040\"} - on (network) group_left ethereum_chain_head_number{instance=\"index-node-1:8040\"})",
+          "expr": "abs(deployment_head{instance=\"graph-node:8040\"} - on (network) group_left ethereum_chain_head_number{instance=\"graph-node:8040\"})",
           "hide": false,
           "interval": "",
           "legendFormat": "{{deployment}}",

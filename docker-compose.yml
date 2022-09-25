@@ -61,6 +61,8 @@ services:
       postgres_db: ${GRAPH_NODE_DB_NAME:-graph-node}
       ipfs: '${IPFS_ENDPOINT:-https://ipfs.network.thegraph.com}'
       ethereum: ${ETHEREUM_RPC}
+      node_role: graph-node
+      node_id: graph_node
       GRAPH_LOG: info
       GRAPH_ALLOW_NON_DETERMINISTIC_IPFS: 1
       GRAPH_KILL_IF_UNRESPONSIVE: "true"
