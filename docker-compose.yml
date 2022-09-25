@@ -57,7 +57,7 @@ services:
     environment:
       postgres_host: ${DB_HOST:-postgres}
       postgres_user: ${DB_USER:-graph-node}
-      postgres_pass: ${DB_PASSWORD:-let-me-in}
+      postgres_pass: ${DB_PASS:-let-me-in}
       postgres_db: ${GRAPH_NODE_DB_NAME:-graph-node}
       ipfs: '${IPFS_ENDPOINT:-https://ipfs.network.thegraph.com}'
       ethereum: ${ETHEREUM_RPC}
